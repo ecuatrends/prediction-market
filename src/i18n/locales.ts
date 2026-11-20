@@ -1,8 +1,8 @@
-export const SUPPORTED_LOCALES = ['es'] as const
+export const SUPPORTED_LOCALES = ['en', 'de', 'es', 'pt', 'fr', 'zh', 'ja', 'ar', 'ru', 'it', 'pl', 'ko'] as const
 
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number]
 
-export const DEFAULT_LOCALE: SupportedLocale = 'es'
+export const DEFAULT_LOCALE: SupportedLocale = 'en'
 export type NonDefaultLocale = Exclude<SupportedLocale, typeof DEFAULT_LOCALE>
 export const NON_DEFAULT_LOCALES = SUPPORTED_LOCALES.filter((locale) => locale !== DEFAULT_LOCALE) as NonDefaultLocale[]
 
